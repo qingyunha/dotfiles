@@ -80,3 +80,4 @@ colorscheme solarized
 
 " read current date
 nnoremap <F2> :r!date +'\%F \%A' <Enter> 
+inoremap  jj <Esc>

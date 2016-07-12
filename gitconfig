@@ -1,0 +1,13 @@
+[push]
+	default = simple
+[user]
+	email = taoqy@51idc.com
+	name = taoqy
+[alias]
+    a = add
+    l = log --oneline
+    s = status
+    d = diff
+    dc = diff --cached
+    co = checkout
+    ci = commit
