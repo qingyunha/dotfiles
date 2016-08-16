@@ -45,6 +45,8 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+nnoremap j gj
+nnoremap k gk
 
 set shiftwidth=4  " operation >> indents 4 columns; << unindents 4 columns
 set tabstop=4     " a hard TAB displays as 4 columns
@@ -81,3 +83,5 @@ colorscheme solarized
 " read current date
 nnoremap <F2> :r!date +'\%F \%A' <Enter> 
 inoremap  jj <Esc>
+
+set autowrite

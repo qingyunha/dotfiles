@@ -11,3 +11,5 @@
     dc = diff --cached
     co = checkout
     ci = commit
+[http]
+	proxy = socks5://localhost:1080

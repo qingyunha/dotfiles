@@ -3,7 +3,7 @@ PATH=$PATH:/usr/local/go/bin
 
 export GOPATH=$HOME/go
 PATH=$PATH:$HOME/.local/bin
-PATH=$PATH:$GOROOT/bin
+PATH=$PATH:$GOPATH/bin
 
 export PATH
 
@@ -20,3 +20,5 @@ transfer() {
 alias transfer=transfer
 
 PS1="\e[30;1m\w\e[0m\n\$ "
+
+alias cman='man -M /usr/local/zhman/share/man/zh_CN'
