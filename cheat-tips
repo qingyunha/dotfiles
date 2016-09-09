@@ -1,0 +1,75 @@
+/usr/bin/setxkbmap -option "caps:swapescape"
+setxkbmap -option ctrl:nocaps
+
+http://stackoverflow.com/questions/4368690/how-to-increase-the-vertical-split-window-size-in-vim   (40 Ctrl-W |)
+
+ss + redsocks + iptables (http://www.jianshu.com/p/814d57d597aa)
+
+sudo env PATH=$PATH cmd (solution for sudo can't find user command)
+
+bash completion /etc/bash_completion.d/
+
+linux Changing the timezone, date, and time(http://www.hypexr.org/linux_date_time_help.php)  
+    1. ln -sf /usr/share/zoneinfo/America/Los_Angeles /etc/localtime  
+    2. date &&  hwclock --utc --systohc ||  NTP
+
+Ctrl-c KeyboardInterrupt to kill threads in python(http://stackoverflow.com/questions/4136632/ctrl-c-i-e-keyboardinterrupt-to-kill-threads-in-pythonk)
+    KeyboardInterrupt exception is only read by the main thread in Python.
+
+Why does running the Flask app run itself twice(http://stackoverflow.com/questions/25504149/why-does-running-the-flask-dev-server-run-itself-twice)
+    Werkzeug reloader 
+
+Three different init system in Ubuntu.(http://askubuntu.com/questions/19320/how-to-enable-or-disable-services)
+    SysV(update-rc.d, chkconfig-redhat) Upstart(/etc/init/*.conf) and systemd(systemctl)
+
+let git use lantern proxy: http(s)_proxy=127.0.0.1:8787 git clone xxx
+
+dynamic change function in python module while remain the function's global namespace
+    flask example
+    ```
+    def jsonify(*args, **kwargs):
+        balabala
+    import types, flask
+    flask.jsonify = types.FunctionType(jsonify.func_code, flask.jsonify.func_globals)
+    ```
+
+bashrc & bash_profile
+    profile for login-shell; rc for no-login-interactive-shell
+    avoid mantian two config file, add this lines to bash_profile:
+        if [ -f ~/.bashrc ]; then
+        source ~/.bashrc
+        fi
+
+
+make '**' recursive for bash(http://stackoverflow.com/questions/1358540/how-to-count-all-the-lines-of-code-in-a-directory-recursively)
+    shopt -s globstar
+
+Git show a file changelog(http://stackoverflow.com/questions/278192/view-the-change-history-of-a-file-using-git-versioning)
+    git log -p filename
+
+bash heredoc (http://stackoverflow.com/questions/2500436/how-does-cat-eof-work-in-bash)
+    cat << EOF > txt
+        here-document
+        here-document
+        here-document
+    EOF
+
+use proxy when using Git protocol for fetching
+    GIT_PROXY_COMMAND=git-proxy git clone git://xxxx
+    or git config --global core.gitProxy git-proxy
+    or git init; git config core.gitProxy git-porxy; git remote add git://xxx; git pull
+
+    git-proxy is execute like  `git-proxy host port`
+    a shell script is fine(socks5 proxy):
+        nc -x localhost:1080 $1 $2
+
+    ref: https://git-scm.com/docs/git-config
+         http://cms-sw.github.io/tutorial-proxy.html
+         http://gitolite.com/git-over-proxy.html#proxying-the-git-protocol
+
+pread(2) and pwrite(2)
+The pread() and pwrite() system calls are  especially  useful  in  multithreaded  applications.
+They  allow  multiple threads to perform I/O on the same file descriptor without being affected by changes to the file offset by other threads.
+
+To remove trailing whitespace use sed
+    sed  -i -r 's/ *$//g' file.txt 
