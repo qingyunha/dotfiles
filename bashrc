@@ -22,3 +22,5 @@ alias transfer=transfer
 PS1="\e[30;1m\w\e[0m\n\$ "
 
 alias cman='man -M /usr/local/zhman/share/man/zh_CN'
+
+export CDPATH=$HOME/51idc:$HOME/go/src:$HOME/Documents

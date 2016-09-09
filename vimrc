@@ -16,6 +16,10 @@ Plugin 'jnurmine/Zenburn'
 
 Plugin 'fatih/vim-go'
 
+Plugin 'ervandew/supertab'
+
+Plugin 'scrooloose/nerdcommenter'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -34,6 +38,7 @@ filetype plugin indent on    " required
 
 set number
 set incsearch
+set showcmd
 
 set splitright
 set splitbelow
@@ -82,6 +87,8 @@ colorscheme solarized
 
 " read current date
 nnoremap <F2> :r!date +'\%F \%A' <Enter> 
-inoremap  jj <Esc>
+inoremap jj <Esc>
+
+nnoremap <Space> <C-D>
 
 set autowrite
