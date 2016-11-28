@@ -73,3 +73,12 @@ They  allow  multiple threads to perform I/O on the same file descriptor without
 
 To remove trailing whitespace use sed
     sed  -i -r 's/ *$//g' file.txt 
+
+xdg-open
+    opens a file or URL in the user's preferred application, like DOS `start`
+
+Limit memory usage for a single Linux process (http://unix.stackexchange.com/questions/44985/limit-memory-usage-for-a-single-linux-process)
+    ulimit -Sv 500000     # Set ~500 mb limit
+
+only one worker launches the apscheduler
+    http://stackoverflow.com/questions/16053364/make-sure-only-one-worker-launches-the-apscheduler-event-in-a-pyramid-web-app-ru
